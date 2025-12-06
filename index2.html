@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEP</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index2.html">
+        <img src="logo.png" alt="medicine" class="logo">
+        </a>
+    <div class="nav-search-wrapper">
+    <nav>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index3.html">Artículos</a></li>
+        <li><a href="#abajo">Contacto</a></li>
+        <li><a href="index4.html">Acerca De</a></li>
+        </ul>
+    </nav>
+<form class="search-form" action="#" method="get">
+    <input type="text" name="search" placeholder="Buscar...">
+    <button type="submit">🔍</button>
+</form>
+    <div class="auth-buttons">
+  <a href="index2,1.html" class="btn-auth">Iniciar Sesión</a>
+  <a href="index2.html" class="btn-auth" >Registrarse</a>
+</div>
+    </div>
+</div>
+</header>
+
+
+
+
+<section class="inicio">
+    <br><br>
+    <div class="FORMULARIO">
+        <h1>REGISTRESE</h1>
+        <form action="/FORMULARIO" method="post">
+            
+            <label for="NOMBRE">NOMBRES:</label>
+            <input type="text" id="NOMBRE" name="nombre" required placeholder="NOMBRES">
+
+            <label for="APELLIDOS">APELLIDOS:</label>
+            <input type="text" id="APELLIDOS" name="APELLIDOS" required placeholder="APELLIDOS">
+
+
+            <label for="EMAIL">CORREO: </label>
+            <input type="email" id="EMAIL" name="email" required placeholder="jose@gmail.com">
+
+            <label for="CONTRASEÑA">CONTRASEÑA</label>
+            <input type="password" id="CONTRASEÑA" name="CONTRASEÑA" required placeholder="********">
+
+                    <label>TELEFONO:</label>
+                    <input type="tel" name="telefono" required placeholder="Ej: 920312021">
+
+                    
+                    <input type="submit" value="REGISTRARME" onclick="return sinBD()">
+
+                    
+        </form>
+    </div> 
+    <br><br>
+
+    <a href="index2,1.html" class="sin-cuenta">¿YA TIENES CUENTA? INICIA SESIÓN AQUÍ</a>
+
+
+<br><br><br>
+
+<footer class="footer">
+  <div class="abajo">
+    <p id="abajo" class="copyright">
+      © 2025 AEP "Medical Supplies". Todos los derechos reservados.
+    </p>
+    
+    <div class="contenedor-boton">
+      <a href="https://www.facebook.com/" class="boton-imagen">
+        <img src="image-removebg-preview.png" alt="Icono Facebook">
+        Facebook
+      </a>
+
+      <a href="https://wa.me/51987654321?text=Hola%20quiero%20informacion" class="boton-imagen" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Icono WhatsApp" >
+        WhatsApp
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+function sinBD() {
+    alert("No se puede iniciar sesión.\nAún no hay conexión a la base de datos.");
+    return false;
+}
+</script>
+</body>
+</html>
