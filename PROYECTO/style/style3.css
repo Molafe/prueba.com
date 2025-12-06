@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', system-ui, Arial, sans-serif;
+    background-color: white ;
+    min-height: 100vh;
+    min-width: 1200px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: white;
+    box-shadow: 0 5px 5px #123D5A;
+    padding: -100px 0;
+    min-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .btn-auth {
+    flex-shrink: 0;
+}
+header, nav, .search-form, .logo {
+    flex-shrink: 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* WRAPPER NAV + SEARCH */
+.nav-search-wrapper {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #123D5A;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #123D5A;
+    border-radius: 5px;
+    color: #f7f7f7;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: rgb(148, 147, 147);
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.search-form input[type="text"] {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 6px 10px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    }
+
+.search-form button:hover {
+background-color: #00b1999a;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-auth {
+  background-color: #2a4dad;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-auth:hover {
+  background-color: #1c3786;
+}
+
+
+.imagen-completa {
+  display: block;         /* elimina el espacio blanco inferior */
+  width: 1896px;           /* 100% del ancho de la ventana */
+  height: 60vh;          /* 100% del alto de la ventana */
+  object-fit: cover;      /* ajusta la imagen sin deformarla */
+  object-position: center;/* centra el enfoque de la imagen */
+  margin: 0 auto;         /* centra horizontalmente si es necesario */
+}
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.abajo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  margin: 0;
+  color: white;
+}
+
+.contenedor-boton {
+  display: flex;
+  gap: 20px;
+}
+
+.boton-imagen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.10);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-imagen img {
+  width: 30px;
+  height: 30px;
+}
+
+.boton-imagen:hover {
+  background-color: #123D5A;
+
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide img {
+    width: 1000px;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* Botones */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 0.3s;
+}
+.arrow:hover {
+    background: rgba(0,0,0,0.75);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+.dots div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 6px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+}
+.dots .active {
+    opacity: 1;
+    background: #00aaff;
+}
+
+
+/* --- Mejoras Generales de la Sección de Productos --- */
+
+/* --- Estilo de la Fila de Productos --- */
+.product-row {
+    display: flex;
+    justify-content: center; /* Centra los pares de productos en la página */
+    gap: 30px; /* Espacio entre los elementos de producto en una fila */
+    margin-bottom: 40px; /* Más espacio entre las filas de productos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas más pequeñas */
+    padding: 0 20px; /* Añade un poco de relleno a los lados de la fila */
+}
+
+/* --- Estilo de Cada Elemento de Producto Individual --- */
+.product-item {
+    background-color: #ffffff; /* Fondo blanco para cada tarjeta de producto */
+    border: 1px solid #e0e0e0; /* Borde sutil para definición */
+    border-radius: 10px; /* Esquinas ligeramente redondeadas para un aspecto más suave */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    text-align: center;
+    padding: 20px; /* Relleno dentro de cada tarjeta de producto */
+    margin: 10px; /* Mantiene un margen para el espaciado general */
+    width: calc(50% - 40px); /* Calcula el ancho para dos elementos con espacio y relleno */
+    max-width: 400px; /* Opcional: Establece un ancho máximo para consistencia */
+    box-sizing: border-box; /* Asegura que el relleno y el borde se incluyan en el ancho total del elemento */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Efecto de transición suave al pasar el ratón */
+    display: flex; /* Usa flexbox para el contenido del elemento */
+    flex-direction: column; /* Apila la imagen y el precio verticalmente */
+    justify-content: space-between; /* Empuja la imagen hacia arriba, el precio hacia abajo */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el ratón */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 250px; /* Altura fija para las imágenes para asegurar uniformidad */
+    object-fit: contain; /* 'contain' asegura que la imagen completa sea visible sin recortar */
+    display: block;
+    margin: 0 auto 15px auto; /* Centra la imagen y añade espacio debajo */
+    border-radius: 5px; /* Esquinas de imagen ligeramente redondeadas */
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #00b69e; /* Usa el color de tu marca para los precios para dar énfasis */
+    font-size: 1.4em; /* Precio más grande y prominente */
+    margin-top: 15px; /* Espacio encima del precio */
+    padding-top: 10px; /* Un poco de relleno para separación visual */
+    border-top: 1px solid #f0f0f0; /* Línea sutil encima del precio */
+}
+
+/* Estilo para el título principal PRODUCTOS */
+.txt_producto {
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #0f2f46, #155a88);
+    border-radius: 10px;
+    width: 80%;
+    margin: 40px auto;
+}
