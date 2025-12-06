@@ -11,7 +11,7 @@ html, body {
 body {
     font-family: 'Poppins', system-ui, Arial, sans-serif;
     min-height: 100vh;
-    background-image: url(imagenes/imagen4.jpeg);
+    background-image: url(/imagenes/imagen4.jpeg);
     background-repeat: no-repeat; /*img no se repita*/
     background-size:cover; /*ajustar tamaño de la imagen cover-contain*/
     background-position: center; /*ajustar la posicion de la img*/
@@ -224,6 +224,7 @@ footer {
 .boton-imagen:hover {
   background-color: #123D5A;
 }
+
 
 
 
