@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AEP · Medical Supplies</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="proeva.css">
+
+  <!-- iconos simples -->
+  <link rel="icon" type="image/png" href="imagenes/logo.png">
+</head>
+<body>
+
+<section style="height: 100vh; display:flex; justify-content:center; align-items:center; background:#c8fff0;">
+    <h1 class="animate">Bienvenido a mi página</h1>
+</section>
+
+<section style="height: 100vh; display:flex; justify-content:center; align-items:center; background:#a0e7d2;">
+    <p class="animate">Este texto aparece con animación al hacer scroll.</p>
+</section>
+
+<section style="height: 100vh; display:flex; justify-content:center; align-items:center; background:#78c9b4;">
+    <div class="animate" style="padding:40px; background:white; border-radius:20px;">
+        Cualquier bloque puede animarse así.
+    </div>
+</section>
+
+<script>
+    const elements = document.querySelectorAll('.animate');
+
+    function showElements() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', showElements);
+    showElements(); // Ejecutar al cargar
+</script>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+observer.observe(document.querySelector(".carousel"));
+
+</script>
+
+</body>
+</html>

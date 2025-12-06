@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', system-ui, Arial, sans-serif;
+    background-image: url(https://www.prosegur.com.pe/dam/jcr:810c1d8a-1428-46dc-b567-d450ed9c6aaf/farmacias%20cash.webp);
+    color: #00b69e;
+    min-height: 100vh;
+    background-repeat: no-repeat; /*img no se repita*/
+    background-size:cover; /*ajustar tamaño de la imagen cover-contain*/
+    background-position: center; /*ajustar la posicion de la img*/
+    background-attachment: fixed;/*img se quede fija mientras se desplaza la pagina*/
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 5px 5px #123D5A;
+    padding: 1px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* WRAPPER NAV + SEARCH */
+.nav-search-wrapper {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #123D5A;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #123D5A;
+    border-radius: 5px;
+    color: #f7f7f7;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: rgb(148, 147, 147);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-form input[type="text"] {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 6px 10px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    }
+
+.search-form button:hover {
+background-color: #00b1999a;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-auth {
+  background-color: #2a4dad;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-auth:hover {
+  background-color: #1c3786;
+}
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.abajo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  margin: 0;
+  color: white;
+}
+
+.contenedor-boton {
+  display: flex;
+  gap: 20px;
+}
+
+.boton-imagen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.10);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-imagen img {
+  width: 30px;
+  height: 30px;
+}
+
+.boton-imagen:hover {
+  background-color: #123D5A;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: -90px;
+}
+
+/* ASIDE COMO COLUMNA DERECHA */
+.sidebar {
+    width: 650px;
+    background-color: rgba(255, 255, 255, 0.7); /* fondo semitransparente */
+    padding: 50px;
+    margin-left: 990px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.sidebar h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.sidebar h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.sidebar p {
+    text-align: center;
+    font-size: 16px;
+}
+/* Opcional: estilo para el contenido principal si agregas algo */
+.main-content > section {
+    flex: 1;
+}
+
+/* ------------------------------ */
+/*  Estilos Responsivos - Tablet y Celular */
+/* ------------------------------ */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-search-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .sidebar {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .abajo {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .contenedor-boton {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+/* Celulares y pantallas pequeñas */
+@media (max-width: 600px) {
+  nav ul li a {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .btn-auth {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .search-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .search-form input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .search-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .sidebar h2 {
+    font-size: 28px;
+  }
+
+  .sidebar h3 {
+    font-size: 22px;
+  }
+
+  .sidebar p {
+    font-size: 14px;
+  }
+
+  .boton-imagen {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .boton-imagen img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer {
+    padding: 10px 5px;
+    font-size: 13px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
